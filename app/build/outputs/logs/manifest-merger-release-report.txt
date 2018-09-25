@@ -1,0 +1,212 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:2:1-56:12
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\6426a0921fb5f89c31fde7939c790267\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\9b8b466f88857467ceeffe448decdf29\AndroidManifest.xml:17:1-31:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\rxandroid-2.0.2.aar\103438713fc49be4145b90f62a09a2e3\AndroidManifest.xml:15:1-21:12
+MERGED from [com.android.support:recyclerview-v7:25.4.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.4.0.aar\c89947fe93d9829248ed0b9357a157a1\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\d8d6f6536127d3ca768ecccd7120247e\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\3e7578faa46eb470a1f9a00e092f67eb\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\29b09652bdd53dd96635ccf5ea71f26e\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\a186058944c5ea90934e3e1a52727b47\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\7a0ceca5bd16320e9028567b582fcd15\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-core-ui:25.4.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.4.0.aar\5679248737aa9e4631e9cb822741ceda\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:25.4.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-compat-25.4.0.aar\cd9bf95985ef88426b444ecb24d736c4\AndroidManifest.xml:17:1-31:12
+INJECTED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:2:1-56:12
+INJECTED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:2:1-56:12
+	package
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:3:5-34
+		INJECTED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml
+		INJECTED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:5:5-30
+		INJECTED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml
+		INJECTED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:4:5-28
+		INJECTED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml
+		INJECTED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml
+uses-sdk
+ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:8:2-10:34
+INJECTED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:8:2-10:34
+INJECTED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:8:2-10:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\6426a0921fb5f89c31fde7939c790267\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\6426a0921fb5f89c31fde7939c790267\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\9b8b466f88857467ceeffe448decdf29\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\9b8b466f88857467ceeffe448decdf29\AndroidManifest.xml:21:5-23:54
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\rxandroid-2.0.2.aar\103438713fc49be4145b90f62a09a2e3\AndroidManifest.xml:19:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.2] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\rxandroid-2.0.2.aar\103438713fc49be4145b90f62a09a2e3\AndroidManifest.xml:19:5-43
+MERGED from [com.android.support:recyclerview-v7:25.4.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.4.0.aar\c89947fe93d9829248ed0b9357a157a1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.4.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.4.0.aar\c89947fe93d9829248ed0b9357a157a1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\d8d6f6536127d3ca768ecccd7120247e\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\d8d6f6536127d3ca768ecccd7120247e\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\3e7578faa46eb470a1f9a00e092f67eb\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\3e7578faa46eb470a1f9a00e092f67eb\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\29b09652bdd53dd96635ccf5ea71f26e\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\29b09652bdd53dd96635ccf5ea71f26e\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\a186058944c5ea90934e3e1a52727b47\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\a186058944c5ea90934e3e1a52727b47\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\7a0ceca5bd16320e9028567b582fcd15\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\7a0ceca5bd16320e9028567b582fcd15\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-core-ui:25.4.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.4.0.aar\5679248737aa9e4631e9cb822741ceda\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.4.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.4.0.aar\5679248737aa9e4631e9cb822741ceda\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.4.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-compat-25.4.0.aar\cd9bf95985ef88426b444ecb24d736c4\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.4.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-compat-25.4.0.aar\cd9bf95985ef88426b444ecb24d736c4\AndroidManifest.xml:21:5-23:58
+INJECTED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:8:2-10:34
+INJECTED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:8:2-10:34
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\6426a0921fb5f89c31fde7939c790267\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:10:3-32
+		INJECTED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml
+		INJECTED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:9:3-29
+		INJECTED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml
+		INJECTED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:12:5-78
+	android:name
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:12:22-75
+uses-permission#android.permission.BIND_ACCESSIBILITY_SERVICE
+ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:13:5-85
+	android:name
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:13:22-82
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:14:5-81
+	android:name
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:14:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:15:5-80
+	android:name
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:15:22-77
+uses-permission#android.permission.ACCESS_SUPERUSER
+ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:16:5-75
+	android:name
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:16:22-72
+uses-permission#android.permission.WAKE_LOCK
+ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:17:5-68
+	android:name
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:17:22-65
+uses-permission#android.permission.DISABLE_KEYGUARD
+ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:18:5-75
+	android:name
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:18:22-72
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:19:5-75
+	android:name
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:19:22-72
+uses-permission#android.permission.GET_TASKS
+ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:20:5-68
+	android:name
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:20:22-65
+uses-permission#android.permission.INTERNET
+ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:21:5-66
+	android:name
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:21:22-64
+application
+ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:25:5-54:19
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\6426a0921fb5f89c31fde7939c790267\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\6426a0921fb5f89c31fde7939c790267\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\9b8b466f88857467ceeffe448decdf29\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\9b8b466f88857467ceeffe448decdf29\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:recyclerview-v7:25.4.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.4.0.aar\c89947fe93d9829248ed0b9357a157a1\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:25.4.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.4.0.aar\c89947fe93d9829248ed0b9357a157a1\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\d8d6f6536127d3ca768ecccd7120247e\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\d8d6f6536127d3ca768ecccd7120247e\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\3e7578faa46eb470a1f9a00e092f67eb\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\3e7578faa46eb470a1f9a00e092f67eb\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\29b09652bdd53dd96635ccf5ea71f26e\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\29b09652bdd53dd96635ccf5ea71f26e\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\a186058944c5ea90934e3e1a52727b47\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\a186058944c5ea90934e3e1a52727b47\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\7a0ceca5bd16320e9028567b582fcd15\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\7a0ceca5bd16320e9028567b582fcd15\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-core-ui:25.4.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.4.0.aar\5679248737aa9e4631e9cb822741ceda\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:25.4.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.4.0.aar\5679248737aa9e4631e9cb822741ceda\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:25.4.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-compat-25.4.0.aar\cd9bf95985ef88426b444ecb24d736c4\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:25.4.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-compat-25.4.0.aar\cd9bf95985ef88426b444ecb24d736c4\AndroidManifest.xml:25:5-29:19
+	android:label
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:28:9-41
+	android:icon
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:27:9-45
+	android:allowBackup
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:26:9-35
+	android:theme
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:29:9-40
+	android:name
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:30:9-60
+activity#com.tools.payhelper.MainActivity
+ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:31:9-39:20
+	android:label
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:33:13-45
+	android:launchMode
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:34:13-48
+	android:name
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:32:13-60
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:35:13-38:29
+action#android.intent.action.MAIN
+ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:36:17-69
+	android:name
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:36:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:37:17-77
+	android:name
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:37:27-74
+service#com.tools.payhelper.DaemonService
+ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:41:3-44:47
+	android:process
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:44:12-45
+	android:enabled
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:42:11-33
+	android:exported
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:43:12-36
+	android:name
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:41:12-41
+meta-data#xposedmodule
+ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:45:10-47:36
+	android:value
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:47:13-33
+	android:name
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:46:13-40
+meta-data#xposeddescription
+ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:48:9-50:40
+	android:value
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:50:13-37
+	android:name
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:49:13-45
+meta-data#xposedminversion
+ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:51:9-53:34
+	android:value
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:53:13-31
+	android:name
+		ADDED from D:\workSpace\AlipayHelper1\app\src\main\AndroidManifest.xml:52:13-44
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\6426a0921fb5f89c31fde7939c790267\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\9b8b466f88857467ceeffe448decdf29\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\9b8b466f88857467ceeffe448decdf29\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\d8d6f6536127d3ca768ecccd7120247e\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\d8d6f6536127d3ca768ecccd7120247e\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\3e7578faa46eb470a1f9a00e092f67eb\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\3e7578faa46eb470a1f9a00e092f67eb\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\29b09652bdd53dd96635ccf5ea71f26e\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\29b09652bdd53dd96635ccf5ea71f26e\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\a186058944c5ea90934e3e1a52727b47\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\a186058944c5ea90934e3e1a52727b47\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\7a0ceca5bd16320e9028567b582fcd15\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\7a0ceca5bd16320e9028567b582fcd15\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-core-ui:25.4.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.4.0.aar\5679248737aa9e4631e9cb822741ceda\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:25.4.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.4.0.aar\5679248737aa9e4631e9cb822741ceda\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:25.4.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-compat-25.4.0.aar\cd9bf95985ef88426b444ecb24d736c4\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:25.4.0] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\support-compat-25.4.0.aar\cd9bf95985ef88426b444ecb24d736c4\AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\6426a0921fb5f89c31fde7939c790267\AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\Administrator\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\6426a0921fb5f89c31fde7939c790267\AndroidManifest.xml:26:9-47

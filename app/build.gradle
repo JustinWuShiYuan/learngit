@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "27.0.3"
+
+    defaultConfig {
+        applicationId "com.tools.payhelper"
+        minSdkVersion 17
+        targetSdkVersion 25
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_7
+            targetCompatibility JavaVersion.VERSION_1_7
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    api 'com.android.support:support-v4:25.3.1'
+    implementation 'com.android.support:appcompat-v7:25.3.1'
+    implementation 'com.android.support:recyclerview-v7:25.4.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.2.0'
+    api files('libs/core_3.2.0.jar')
+    api files('libs/jsoup-1.7.2.jar')
+    api files('libs/myjson-1.5.jar')
+    api files('libs/nanohttpd-2.3.1-SNAPSHOT.jar')
+    api files('libs/org.apache.http.legacy.jar')
+//    api files('libs/support-annotations-25.0.0.jar')
+    api files('libs/xUtils-2.6.14.jar')
+    implementation files('lib/XposedBridgeAPI-89.jar')
+
+    api  'com.squareup.retrofit2:retrofit:2.3.0'//导入retrofit
+    api  'com.google.code.gson:gson:2.6.2'//Gson 库
+//下面两个是RxJava 和 RxAndroid
+    api  'io.reactivex.rxjava2:rxandroid:2.0.2'
+    api  'io.reactivex.rxjava2:rxjava:2.x.y'
+    api  'com.squareup.retrofit2:converter-gson:2.3.0'//转换器，请求结果转换成Model
+    api  'com.squareup.retrofit2:adapter-rxjava2:2.3.0'//配合Rxjava 使用
+}
