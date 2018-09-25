@@ -383,7 +383,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 	}
 
-
+	@Override
+	protected void onResume() {
+		super.onResume();
+		if (PayHelperUtils.isAppRunning(context, "com.eg.android.AlipayGphone")) {
+			PayHelperUtils.stopApp(context, "com.eg.android.AlipayGphone");
+		}
+	}
 
 	@Override
 	public void onBackPressed() {
@@ -400,13 +406,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		return super.onKeyDown(keyCode, event);
 	}
 
-	@Override
-	protected void onResume() {
-		super.onResume();
-		if(PayHelperUtils.isAppRunning(MainActivity.this,"com.eg.android.AlipayGphone")){
-			PayHelperUtils.stopApp(MainActivity.this,"com.eg.android.AlipayGphone");
-		}
-	}
 
 	@Override
 	protected void onDestroy() {
