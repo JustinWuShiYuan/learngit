@@ -87,7 +87,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	private int  uploadIsOk = 200;
 
 	private int[] frequentlyMoney ={10,20,30,40, 50,60,70,80,90,100,200,300,400 ,500 ,600 , 700, 800, 900, 1000,2000 , 3000, 4000,5000 };
-	private List specialList = new ArrayList<>();
+	private List<Integer> specialList = new ArrayList<>();
 
 
 
@@ -99,8 +99,18 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		setContentView(R.layout.activity_main);
 
 		initView();
+		initSpecialListData();
 		initRuleData();
 		registerBillReceiver();
+	}
+
+	private void initSpecialListData() {
+		specialList.add(20);
+		specialList.add(30);
+		specialList.add(100);
+		specialList.add(200);
+		specialList.add(300);
+		specialList.add(500);
 	}
 
 	private void initView() {
@@ -171,12 +181,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 
 		//最特殊的金额 需要30张 数据
-//		specialList.add(100); 20，30，100，200，300，500
-
 		for(int i=0;i<frequentlyMoney.length;i++){
 			for (int j = 0;j<=9;j++){
 				if(specialList.contains(frequentlyMoney[i]) ){
-					//TODO 处理最多30张
+					money = frequentlyMoney[i] - 1 + ".8" + j;
+					listRuleData.add(money);
+
+					money = frequentlyMoney[i] - 1 + ".7" + j;
+					listRuleData.add(money);
 				}else {
 					money = frequentlyMoney[i] - 1 + ".8" + j;
 					listRuleData.add(money);
@@ -396,6 +408,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 
 			case R.id.btn_start_upload:
+				accountBeanList = new ArrayList<>();
 				accountNum = etPayAccount.getText().toString();
 				payTypeNum = etPayType.getText().toString();
 				if(TextUtils.isEmpty(accountNum) ||
@@ -407,16 +420,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				executorService.execute(new Runnable() {
 					@Override
 					public void run() {
-
-//						for (int i = 1100;i<=5000;i+=100){//测试数据
 //						for (int i = 0;i<=listRuleData.size();i++){//测试数据
-//							for (int j = 0;j<=9;j++){
-//								money = i - 1 + ".9" + j;
-//								accountBeanList.add( new AccountBean(money,"htpp://wwwwww"+money));
-//							}
-//							money = i + ".00";
-//							accountBeanList.add( new AccountBean(money,"htpp://wwwwww"+money));
-//
+//							accountBeanList.add( new AccountBean(listRuleData.get(i).toString(),"htpp://wwwwww"+money));
 //						}
 						startJointUploadJson();
 					}
