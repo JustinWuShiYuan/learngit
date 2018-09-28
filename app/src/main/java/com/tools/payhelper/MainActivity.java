@@ -20,11 +20,11 @@ import com.tools.payhelper.utils.PayHelperUtils;
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
@@ -84,6 +84,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 	private int loggDisplayMaxLength = 4000;
 	private Object lockObj = new Object();
+	private int  uploadIsOk = 200;
+
+	private int[] frequentlyMoney ={10,20,30,40, 50,60,70,80,90,100,200,300,400 ,500 ,600 , 700, 800, 900, 1000,2000 , 3000, 4000,5000 };
+	private List specialList = new ArrayList<>();
+
 
 
 	@Override
@@ -162,6 +167,21 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			listRuleData.add(money);
 
 			moneyList.add(i);
+		}
+
+
+		//最特殊的金额 需要30张 数据
+//		specialList.add(100); 20，30，100，200，300，500
+
+		for(int i=0;i<frequentlyMoney.length;i++){
+			for (int j = 0;j<=9;j++){
+				if(specialList.contains(frequentlyMoney[i]) ){
+					//TODO 处理最多30张
+				}else {
+					money = frequentlyMoney[i] - 1 + ".8" + j;
+					listRuleData.add(money);
+				}
+			}
 		}
 
 	}
@@ -252,13 +272,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				MainActivity.this.runOnUiThread(new Runnable() {
 					@Override
 					public void run() {
-						Toast.makeText(MainActivity.this,resultBean.getStatus() +resultBean.getMessage(),Toast.LENGTH_LONG).show();
-//						if(resultBean.getStatus() == MyConstant.uploadOk){
-//							Toast.makeText(MainActivity.this,getString(R.string.uploadSuccess),Toast.LENGTH_LONG).show();
-//						}else{
-//							Toast.makeText(MainActivity.this,""+resultBean.getMessage(),Toast.LENGTH_LONG).show();
-//						}
+//						Toast.makeText(MainActivity.this,resultBean.getStatus() +resultBean.getMessage(),Toast.LENGTH_LONG).show();
+						showUploadResultDialog(resultBean.getStatus()+":"+resultBean.getMessage());
 						Log.i("rescounter","resultBean.getStatus():"+resultBean.getStatus() + resultBean.getMessage());
+
 					}
 				});
 //				if(resultBean.getStatus() != 200){
@@ -272,13 +289,20 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			}
 
 			@Override
-			public void onError(Throwable e) {
-				Log.i("rescounter",e.toString());
-				try {
-					FileUtils.writeFileToSDCard(stringBuffer.toString()+"\n"+e.toString());
-				} catch (IOException t) {
-					t.printStackTrace();
-				}
+			public void onError(final Throwable e) {
+//				try {
+//					FileUtils.writeFileToSDCard(stringBuffer.toString()+"\n"+e.toString());
+//				} catch (IOException t) {
+//					t.printStackTrace();
+//				}
+				MainActivity.this.runOnUiThread(new Runnable() {
+					@Override
+					public void run() {
+						Log.i("rescounter",e.toString());
+//						Toast.makeText(MainActivity.this,resultBean.getStatus() +resultBean.getMessage(),Toast.LENGTH_LONG).show();
+						showUploadResultDialog(e.toString());
+					}
+				});
 			}
 
 			@Override
@@ -288,6 +312,29 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		});
 
 		recycleViewListData = new ArrayList<>();//清空
+
+	}
+
+
+
+	private void showUploadResultDialog(final String failMessage) {
+		AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this)
+				.setIcon(R.drawable.ic_launcher)
+				.setTitle(R.string.upload_result)
+				.setMessage(failMessage)
+				.setNegativeButton(R.string.fail, new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						dialog.dismiss();
+					}
+				})
+				.setPositiveButton(R.string.sure, new DialogInterface.OnClickListener() {
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						Toast.makeText(MainActivity.this,R.string.upload_fail,Toast.LENGTH_LONG).show();
+					}
+				});
+		builder.show();
 
 	}
 
@@ -343,10 +390,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
 						timer.cancel();
 						timer = null;
 					}
-//								for(int i=1;i<listRuleData.size();i++){
-//									PayHelperUtils.sendAppPay(String.valueOf(listRuleData.get(i)),PayHelperUtils.getOrderNumber(),context);
-//									ruleIndex++;
-//								}
 				}
 			},40000,700);
 				break;
@@ -364,7 +407,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				executorService.execute(new Runnable() {
 					@Override
 					public void run() {
-//						for (int i = 6000;i<=7000;i += 1000){ //测试数据
+
+//						for (int i = 1100;i<=5000;i+=100){//测试数据
+//						for (int i = 0;i<=listRuleData.size();i++){//测试数据
 //							for (int j = 0;j<=9;j++){
 //								money = i - 1 + ".9" + j;
 //								accountBeanList.add( new AccountBean(money,"htpp://wwwwww"+money));
