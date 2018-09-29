@@ -12,4 +12,5 @@
     <string name="fail">失败</string>
     <string name="upload_fail">上传失败，请重新上传</string>
     <string name="upload_result">上传结果对话框</string>
+    <string name="pleaseWaitUploadResult">你已经点击过上传，\n 请稍等上传结果</string>
 </resources>

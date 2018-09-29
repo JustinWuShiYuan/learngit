@@ -14,7 +14,7 @@ public class OkHttp3Utils {
 
     //设置缓存目录
     private static File cacheDirectory = new File(CustomApplcation.getInstance().getContext().getCacheDir().getAbsolutePath(), "MyCache");
-    private static Cache cache = new Cache(cacheDirectory, 10 * 1024 * 1024);
+    private static Cache cache = new Cache(cacheDirectory, 100 * 1024 * 1024);
 
 
     /**
@@ -30,9 +30,9 @@ public class OkHttp3Utils {
                     //.addInterceptor(new MyIntercepter())
                     //.addNetworkInterceptor(new CookiesInterceptor(MyApplication.getInstance().getApplicationContext()))
                     //设置请求读写的超时时间
-                    .connectTimeout(15, TimeUnit.SECONDS)
-                    .writeTimeout(30, TimeUnit.SECONDS)
-                    .readTimeout(30, TimeUnit.SECONDS)
+                    .connectTimeout(60, TimeUnit.SECONDS)
+                    .writeTimeout(50, TimeUnit.SECONDS)
+                    .readTimeout(50, TimeUnit.SECONDS)
                     .cache(cache)
                     .build();
         }

@@ -32,6 +32,11 @@ public class NetWorks extends RetrofitUtils {
         @POST(MyConstant.uploadQrData)
         Observable<ResultBean> uploadJsonToServer(@Field("qrData") String qrData, @Field("token") String token);
 
+        //POST请求
+        @FormUrlEncoded
+        @POST(MyConstant.uploadQrDataAgain)
+        Observable<ResultBean> uploadJsonToServerAgain(@Field("qrData") String qrData, @Field("token") String token);
+
 //        //POST请求
 //        @FormUrlEncoded
 //        @POST("bjws/app.user/login")
@@ -57,6 +62,10 @@ public class NetWorks extends RetrofitUtils {
     //POST请求
     public static void uploadJson(String qrData, String token,Observer<ResultBean> observer){
         setSubscribe(service.uploadJsonToServer(qrData, token),observer);
+    }
+    //POST请求
+    public static void uploadErrorJson(String qrData, String token,Observer<ResultBean> observer){
+        setSubscribe(service.uploadJsonToServerAgain(qrData, token),observer);
     }
 
 //

@@ -76,7 +76,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 	private Button	btnStartUploadData;
 	private Button	btnOpenZFb;
-	private Button  btnCurrnetVersion;
 	private EditText	etPayAccount;
 	private EditText	etPayType;
 
@@ -84,11 +83,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 	private int loggDisplayMaxLength = 4000;
 	private Object lockObj = new Object();
-	private int  uploadIsOk = 200;
 
 	private int[] frequentlyMoney ={10,20,30,40, 50,60,70,80,90,100,200,300,400 ,500 ,600 , 700, 800, 900, 1000,2000 , 3000, 4000,5000 };
 	private List<Integer> specialList = new ArrayList<>();
 
+	private boolean isClicked = false;
 
 
 	@Override
@@ -179,22 +178,22 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			moneyList.add(i);
 		}
 
-
-		//最特殊的金额 需要30张 数据
-		for(int i=0;i<frequentlyMoney.length;i++){
-			for (int j = 0;j<=9;j++){
-				if(specialList.contains(frequentlyMoney[i]) ){
-					money = frequentlyMoney[i] - 1 + ".8" + j;
-					listRuleData.add(money);
-
-					money = frequentlyMoney[i] - 1 + ".7" + j;
-					listRuleData.add(money);
-				}else {
-					money = frequentlyMoney[i] - 1 + ".8" + j;
-					listRuleData.add(money);
-				}
-			}
-		}
+//
+//		//最特殊的金额 需要30张 数据
+//		for(int i=0;i<frequentlyMoney.length;i++){
+//			for (int j = 0;j<=9;j++){
+//				if(specialList.contains(frequentlyMoney[i]) ){
+//					money = frequentlyMoney[i] - 1 + ".8" + j;
+//					listRuleData.add(money);
+//
+//					money = frequentlyMoney[i] - 1 + ".7" + j;
+//					listRuleData.add(money);
+//				}else {
+//					money = frequentlyMoney[i] - 1 + ".8" + j;
+//					listRuleData.add(money);
+//				}
+//			}
+//		}
 
 	}
 
@@ -213,6 +212,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	/**
 	 * 拼接要上傳 的字符串*/
 	private void startJointUploadJson() {
+		stringBuffer .setLength(0);
 //		stringBuffer.append("qrData={");
 		stringBuffer.append("{");
 			stringBuffer.append(fuHao+"account"+ fuHao +":"+ fuHao +accountNum+fuHao+",");
@@ -273,6 +273,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 //
 //		Log.i("rescounter",stringBuffer.toString());
 
+		requestNet();
+
+		recycleViewListData = new ArrayList<>();//清空
+
+	}
+
+	private void requestNet() {
 		NetWorks.uploadJson(stringBuffer.toString(), MyConstant.token, new Observer<ResultBean>() {
 			@Override
 			public void onSubscribe(Disposable d) {
@@ -291,22 +298,20 @@ public class MainActivity extends Activity implements View.OnClickListener {
 					}
 				});
 //				if(resultBean.getStatus() != 200){
-//					try {
-//						FileUtils.writeFileToSDCard(stringBuffer.toString());
-//					} catch (IOException e) {
-//						e.printStackTrace();
-//					}
+//					uploadErrorJson();
 //				}
 
 			}
 
 			@Override
 			public void onError(final Throwable e) {
-//				try {
-//					FileUtils.writeFileToSDCard(stringBuffer.toString()+"\n"+e.toString());
-//				} catch (IOException t) {
-//					t.printStackTrace();
-//				}
+//				executorService.execute(new Runnable() {
+//					@Override
+//					public void run() {
+//						uploadErrorJson();
+//					}
+//				});
+
 				MainActivity.this.runOnUiThread(new Runnable() {
 					@Override
 					public void run() {
@@ -322,12 +327,48 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				Log.i("rescounter","onComplete()");
 			}
 		});
-
-		recycleViewListData = new ArrayList<>();//清空
-
 	}
 
 
+//	private void uploadErrorJson() {
+//		NetWorks.uploadErrorJson(stringBuffer.toString(), MyConstant.token, new Observer<ResultBean>() {
+//			@Override
+//			public void onSubscribe(Disposable d) {
+//				Log.i("rescounter","start  uploadErrorJson 订阅.......");
+//			}
+//
+//			@Override
+//			public void onNext(final ResultBean resultBean) {
+//				MainActivity.this.runOnUiThread(new Runnable() {
+//					@Override
+//					public void run() {
+////						Toast.makeText(MainActivity.this,resultBean.getStatus() +resultBean.getMessage(),Toast.LENGTH_LONG).show();
+//						showUploadResultDialog(resultBean.getStatus()+":"+resultBean.getMessage());
+//						Log.i("rescounter","uploadErrorJson  resultBean.getStatus():"+resultBean.getStatus() + resultBean.getMessage());
+//
+//					}
+//				});
+//
+//			}
+//
+//			@Override
+//			public void onError(final Throwable e) {
+//				MainActivity.this.runOnUiThread(new Runnable() {
+//					@Override
+//					public void run() {
+//						Log.i("rescounter",e.toString());
+////						Toast.makeText(MainActivity.this,resultBean.getStatus() +resultBean.getMessage(),Toast.LENGTH_LONG).show();
+//						showUploadResultDialog(e.toString());
+//					}
+//				});
+//			}
+//
+//			@Override
+//			public void onComplete() {
+//				Log.i("rescounter","onComplete()");
+//			}
+//		});
+//	}
 
 	private void showUploadResultDialog(final String failMessage) {
 		AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this)
@@ -343,7 +384,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				.setPositiveButton(R.string.sure, new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
-						Toast.makeText(MainActivity.this,R.string.upload_fail,Toast.LENGTH_LONG).show();
+						dialog.dismiss();
 					}
 				});
 		builder.show();
@@ -367,6 +408,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 		switch (v.getId()){
 			case R.id.btn_open_zfb:		//打开支护宝
+				isClicked = false;
 				accountBeanList = new ArrayList<>();
 				accountNum = etPayAccount.getText().toString();
 				payTypeNum = etPayType.getText().toString();
@@ -378,6 +420,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 				if (!PayHelperUtils.isAppRunning(context, "com.eg.android.AlipayGphone")) {
 					PayHelperUtils.startAPP(context, "com.eg.android.AlipayGphone");
+
 				}else {
 					PayHelperUtils.stopApp(MainActivity.this,"com.eg.android.AlipayGphone");
 					if(timer2 == null){
@@ -391,24 +434,28 @@ public class MainActivity extends Activity implements View.OnClickListener {
 					},3000);
 				}
 
-				timer.schedule(new TimerTask() {
-				@Override
-				public void run() {
 
-					if(ruleIndex < listRuleData.size()){
-						PayHelperUtils.sendAppPay(String.valueOf(listRuleData.get(ruleIndex)),PayHelperUtils.getOrderNumber(),context);
-						ruleIndex++;
-					}else{
-						timer.cancel();
-						timer = null;
+				timer.schedule(new TimerTask() {
+					@Override
+					public void run() {
+						if(ruleIndex < listRuleData.size()){
+							PayHelperUtils.sendAppPay(String.valueOf(listRuleData.get(ruleIndex)),PayHelperUtils.getOrderNumber(),context);
+							ruleIndex++;
+						}else{
+							timer.cancel();
+							timer = null;
+						}
 					}
-				}
-			},40000,700);
+				},35000,700);
+
 				break;
 
 
 			case R.id.btn_start_upload:
-				accountBeanList = new ArrayList<>();
+				if(isClicked){
+					Toast.makeText(MainActivity.this,R.string.pleaseWaitUploadResult,Toast.LENGTH_LONG).show();
+					return;
+				}
 				accountNum = etPayAccount.getText().toString();
 				payTypeNum = etPayType.getText().toString();
 				if(TextUtils.isEmpty(accountNum) ||
@@ -423,6 +470,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 //						for (int i = 0;i<=listRuleData.size();i++){//测试数据
 //							accountBeanList.add( new AccountBean(listRuleData.get(i).toString(),"htpp://wwwwww"+money));
 //						}
+						isClicked = true;
 						startJointUploadJson();
 					}
 				});
@@ -476,6 +524,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		public void onReceive(final Context context, Intent intent) {
 			try {
 				if (intent.getAction().contentEquals(QRCODERECEIVED_ACTION)) {
+
 					amount1 = intent.getStringExtra("amount");
 					ordernumberStr = intent.getStringExtra("ordernumber");
 					qrcode = intent.getStringExtra("qrcode");

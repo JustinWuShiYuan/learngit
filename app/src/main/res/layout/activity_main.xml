@@ -46,8 +46,9 @@
             android:layout_toRightOf="@+id/btn_open_zfb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_gravity="center"
-            android:text="当前版本2.0" />
+            android:text="当前版本3.0" />
 
         <Button
             android:id="@+id/btn_start_upload"
