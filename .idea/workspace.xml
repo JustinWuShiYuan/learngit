@@ -9,7 +9,9 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54a7cffb-a383-4b37-a947-bc2b207d3404" name="Default" comment="" />
+    <list default="true" id="54a7cffb-a383-4b37-a947-bc2b207d3404" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/MainActivity.java" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,9 +36,25 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1754">
-              <caret line="377" column="35" lean-forward="false" selection-start-line="377" selection-start-column="35" selection-end-line="377" selection-end-column="35" />
-              <folding />
+            <state relative-caret-position="442">
+              <caret line="436" column="121" lean-forward="false" selection-start-line="436" selection-start-column="121" selection-end-line="436" selection-end-column="121" />
+              <folding>
+                <element signature="method#startJointUploadJson#0;class#MainActivity#0" expanded="false" />
+                <element signature="e#8663#9039#0" expanded="true" />
+                <element signature="e#9038#9039#0" expanded="true" />
+                <element signature="e#9182#9276#0" expanded="true" />
+                <element signature="e#9275#9276#0" expanded="true" />
+                <element signature="e#9572#9573#0" expanded="true" />
+                <element signature="e#9637#9638#0" expanded="true" />
+                <element signature="e#9742#10129#0" expanded="true" />
+                <element signature="e#10128#10129#0" expanded="true" />
+                <element signature="e#10232#10501#0" expanded="true" />
+                <element signature="e#10500#10501#0" expanded="true" />
+                <element signature="e#10551#10552#0" expanded="true" />
+                <element signature="e#10596#10597#0" expanded="true" />
+                <element signature="e#12498#12815#0" expanded="true" />
+                <element signature="e#12814#12815#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,10 +62,9 @@
       <file leaf-file-name="AliPayHook.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/AliPayHook.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1266">
-              <caret line="70" column="65" lean-forward="false" selection-start-line="70" selection-start-column="65" selection-end-line="70" selection-end-column="65" />
+            <state relative-caret-position="437">
+              <caret line="34" column="88" lean-forward="false" selection-start-line="34" selection-start-column="88" selection-end-line="34" selection-end-column="88" />
               <folding>
-                <element signature="e#903#2003#0" expanded="true" />
                 <element signature="e#3739#4043#0" expanded="true" />
                 <element signature="e#4042#4043#0" expanded="true" />
                 <element signature="e#4153#4321#0" expanded="true" />
@@ -64,11 +81,9 @@
       <file leaf-file-name="PayHelperUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/utils/PayHelperUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="238" column="5" lean-forward="false" selection-start-line="238" selection-start-column="5" selection-end-line="238" selection-end-column="5" />
-              <folding>
-                <marker date="1538367483210" expanded="true" signature="6340:6344" ph="{...}" />
-              </folding>
+            <state relative-caret-position="370">
+              <caret line="230" column="25" lean-forward="false" selection-start-line="230" selection-start-column="25" selection-end-line="230" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -93,18 +108,6 @@
           </provider>
           <provider editor-type-id="android-designer2">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NetWorks.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/net/NetWorks.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1265">
-              <caret line="65" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="5" />
-              <folding>
-                <marker date="1538367483209" expanded="true" signature="2446:3425" ph="//..." />
-              </folding>
-            </state>
           </provider>
         </entry>
       </file>
@@ -145,8 +148,9 @@
       <find>moneyList</find>
       <find>initRuleData</find>
       <find>stringBuffer</find>
-      <find>startJointUploadJson</find>
       <find>accountBeanList</find>
+      <find>startJointUploadJson</find>
+      <find>com.tools.payhelper.msgreceived</find>
     </findStrings>
   </component>
   <component name="GenerateSignedApkSettings">
@@ -2179,8 +2183,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/net/NetWorks.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/constants/MyConstant.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/net/OkHttp3Utils.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -2445,8 +2449,8 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26256984" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17430167" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2905028" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18659218" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28938547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2454,24 +2458,41 @@
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25810057" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10554371" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08155651" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19989339" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2905028" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292978" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10554371" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960895" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23798883" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12100213" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25810057" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -2482,11 +2503,166 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/utils/FileUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="56" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="26" column="60" lean-forward="false" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="12" column="35" lean-forward="false" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/constants/MyConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="66" lean-forward="false" selection-start-line="3" selection-start-column="66" selection-end-line="3" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/net/OkHttp3Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="32" column="37" lean-forward="false" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="16" column="41" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://D:/tool/android-sdk/sources/android-25/android/content/Context.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="1779" column="25" lean-forward="false" selection-start-line="1779" selection-start-column="25" selection-end-line="1779" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/bean/AccountBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="38" column="18" lean-forward="false" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+          <folding>
+            <element signature="e#578#579#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/utils/PayHelperUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="244" column="5" lean-forward="false" selection-start-line="244" selection-start-column="5" selection-end-line="244" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/AliPayHook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="34" column="88" lean-forward="false" selection-start-line="34" selection-start-column="88" selection-end-line="34" selection-end-column="88" />
+          <folding>
+            <element signature="e#3739#4043#0" expanded="true" />
+            <element signature="e#4042#4043#0" expanded="true" />
+            <element signature="e#4153#4321#0" expanded="true" />
+            <element signature="e#4320#4321#0" expanded="true" />
+            <element signature="e#4422#4590#0" expanded="true" />
+            <element signature="e#4589#4590#0" expanded="true" />
+            <element signature="e#4653#4808#0" expanded="true" />
+            <element signature="e#4807#4808#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/net/NetWorks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="32" column="31" lean-forward="false" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="42" column="72" lean-forward="false" selection-start-line="42" selection-start-column="52" selection-end-line="42" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4579">
+          <caret line="383" column="44" lean-forward="false" selection-start-line="383" selection-start-column="24" selection-end-line="383" selection-end-column="44" />
+          <folding>
+            <element signature="method#startJointUploadJson#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#8663#9039#0" expanded="true" />
+            <element signature="e#9038#9039#0" expanded="true" />
+            <element signature="e#9182#9276#0" expanded="true" />
+            <element signature="e#9275#9276#0" expanded="true" />
+            <element signature="e#9572#9573#0" expanded="true" />
+            <element signature="e#9637#9638#0" expanded="true" />
+            <element signature="e#9742#10129#0" expanded="true" />
+            <element signature="e#10128#10129#0" expanded="true" />
+            <element signature="e#10232#10501#0" expanded="true" />
+            <element signature="e#10500#10501#0" expanded="true" />
+            <element signature="e#10551#10552#0" expanded="true" />
+            <element signature="e#10596#10597#0" expanded="true" />
+            <element signature="e#12498#12815#0" expanded="true" />
+            <element signature="e#12814#12815#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#startJointUploadJson#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#8663#9039#0" expanded="true" />
+            <element signature="e#9038#9039#0" expanded="true" />
+            <element signature="e#9182#9276#0" expanded="true" />
+            <element signature="e#9275#9276#0" expanded="true" />
+            <element signature="e#9572#9573#0" expanded="true" />
+            <element signature="e#9637#9638#0" expanded="true" />
+            <element signature="e#9742#10129#0" expanded="true" />
+            <element signature="e#10128#10129#0" expanded="true" />
+            <element signature="e#10232#10501#0" expanded="true" />
+            <element signature="e#10500#10501#0" expanded="true" />
+            <element signature="e#10551#10552#0" expanded="true" />
+            <element signature="e#10596#10597#0" expanded="true" />
+            <element signature="e#12498#12815#0" expanded="true" />
+            <element signature="e#12814#12815#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2494,9 +2670,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="32" column="31" lean-forward="false" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-          <folding>
-            <marker date="1538367483209" expanded="true" signature="2446:3425" ph="//..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2551,7 +2725,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="358">
           <caret line="163" column="9" lean-forward="false" selection-start-line="163" selection-start-column="9" selection-end-line="163" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2559,7 +2732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2567,7 +2739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="7" column="56" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2575,7 +2746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="26" column="60" lean-forward="false" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2607,9 +2777,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1265">
           <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="2" selection-end-line="68" selection-end-column="7" />
-          <folding>
-            <marker date="1538367483209" expanded="true" signature="2446:3425" ph="//..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2642,10 +2810,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/AliPayHook.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1266">
-          <caret line="70" column="65" lean-forward="false" selection-start-line="70" selection-start-column="65" selection-end-line="70" selection-end-column="65" />
+        <state relative-caret-position="437">
+          <caret line="34" column="88" lean-forward="false" selection-start-line="34" selection-start-column="88" selection-end-line="34" selection-end-column="88" />
           <folding>
-            <element signature="e#903#2003#0" expanded="true" />
             <element signature="e#3739#4043#0" expanded="true" />
             <element signature="e#4042#4043#0" expanded="true" />
             <element signature="e#4153#4321#0" expanded="true" />
@@ -2668,21 +2835,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/utils/PayHelperUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="238" column="5" lean-forward="false" selection-start-line="238" selection-start-column="5" selection-end-line="238" selection-end-column="5" />
-          <folding>
-            <marker date="1538367483210" expanded="true" signature="6340:6344" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="147" column="8" lean-forward="false" selection-start-line="147" selection-start-column="8" selection-end-line="162" selection-end-column="9" />
-          <folding />
+          <folding>
+            <element signature="method#startJointUploadJson#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#8663#9039#0" expanded="true" />
+            <element signature="e#9038#9039#0" expanded="true" />
+            <element signature="e#9182#9276#0" expanded="true" />
+            <element signature="e#9275#9276#0" expanded="true" />
+            <element signature="e#9572#9573#0" expanded="true" />
+            <element signature="e#9637#9638#0" expanded="true" />
+            <element signature="e#9742#10129#0" expanded="true" />
+            <element signature="e#10128#10129#0" expanded="true" />
+            <element signature="e#10232#10501#0" expanded="true" />
+            <element signature="e#10500#10501#0" expanded="true" />
+            <element signature="e#10551#10552#0" expanded="true" />
+            <element signature="e#10596#10597#0" expanded="true" />
+            <element signature="e#12498#12815#0" expanded="true" />
+            <element signature="e#12814#12815#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2690,7 +2863,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#startJointUploadJson#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#8663#9039#0" expanded="true" />
+            <element signature="e#9038#9039#0" expanded="true" />
+            <element signature="e#9182#9276#0" expanded="true" />
+            <element signature="e#9275#9276#0" expanded="true" />
+            <element signature="e#9572#9573#0" expanded="true" />
+            <element signature="e#9637#9638#0" expanded="true" />
+            <element signature="e#9742#10129#0" expanded="true" />
+            <element signature="e#10128#10129#0" expanded="true" />
+            <element signature="e#10232#10501#0" expanded="true" />
+            <element signature="e#10500#10501#0" expanded="true" />
+            <element signature="e#10551#10552#0" expanded="true" />
+            <element signature="e#10596#10597#0" expanded="true" />
+            <element signature="e#12498#12815#0" expanded="true" />
+            <element signature="e#12814#12815#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2698,9 +2887,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="32" column="31" lean-forward="false" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-          <folding>
-            <marker date="1538367483209" expanded="true" signature="2446:3425" ph="//..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2756,17 +2943,6 @@
         <state relative-caret-position="358">
           <caret line="163" column="9" lean-forward="false" selection-start-line="163" selection-start-column="9" selection-end-line="163" selection-end-column="9" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="16" column="41" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/utils/FileUtils.java">
@@ -2806,16 +2982,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/net/NetWorks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1265">
-          <caret line="65" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="5" />
-          <folding>
-            <marker date="1538367483209" expanded="true" signature="2446:3425" ph="//..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -2824,11 +2990,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/net/NetWorks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="37" column="31" lean-forward="false" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="16" column="41" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/utils/PayHelperUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="230" column="25" lean-forward="false" selection-start-line="230" selection-start-column="25" selection-end-line="230" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1754">
-          <caret line="377" column="35" lean-forward="false" selection-start-line="377" selection-start-column="35" selection-end-line="377" selection-end-column="35" />
-          <folding />
+        <state relative-caret-position="442">
+          <caret line="436" column="121" lean-forward="false" selection-start-line="436" selection-start-column="121" selection-end-line="436" selection-end-column="121" />
+          <folding>
+            <element signature="method#startJointUploadJson#0;class#MainActivity#0" expanded="false" />
+            <element signature="e#8663#9039#0" expanded="true" />
+            <element signature="e#9038#9039#0" expanded="true" />
+            <element signature="e#9182#9276#0" expanded="true" />
+            <element signature="e#9275#9276#0" expanded="true" />
+            <element signature="e#9572#9573#0" expanded="true" />
+            <element signature="e#9637#9638#0" expanded="true" />
+            <element signature="e#9742#10129#0" expanded="true" />
+            <element signature="e#10128#10129#0" expanded="true" />
+            <element signature="e#10232#10501#0" expanded="true" />
+            <element signature="e#10500#10501#0" expanded="true" />
+            <element signature="e#10551#10552#0" expanded="true" />
+            <element signature="e#10596#10597#0" expanded="true" />
+            <element signature="e#12498#12815#0" expanded="true" />
+            <element signature="e#12814#12815#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

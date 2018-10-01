@@ -288,30 +288,66 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 			@Override
 			public void onNext(final ResultBean resultBean) {
-				MainActivity.this.runOnUiThread(new Runnable() {
-					@Override
-					public void run() {
-//						Toast.makeText(MainActivity.this,resultBean.getStatus() +resultBean.getMessage(),Toast.LENGTH_LONG).show();
-						showUploadResultDialog(resultBean.getStatus()+":"+resultBean.getMessage());
-						Log.i("rescounter","resultBean.getStatus():"+resultBean.getStatus() + resultBean.getMessage());
 
-					}
-				});
-//				if(resultBean.getStatus() != 200){
-//					uploadErrorJson();
-//				}
+				if(resultBean.getStatus() != 200){
+					uploadErrorJson();
+				}else if(resultBean.getStatus() == 200){
+					MainActivity.this.runOnUiThread(new Runnable() {
+						@Override
+						public void run() {
+//						Toast.makeText(MainActivity.this,resultBean.getStatus() +resultBean.getMessage(),Toast.LENGTH_LONG).show();
+							showUploadResultDialog(resultBean.getStatus()+":"+resultBean.getMessage());
+							Log.i("rescounter","resultBean.getStatus():"+resultBean.getStatus() + resultBean.getMessage());
+
+						}
+					});
+				}
 
 			}
 
 			@Override
 			public void onError(final Throwable e) {
-//				executorService.execute(new Runnable() {
-//					@Override
-//					public void run() {
-//						uploadErrorJson();
-//					}
-//				});
+				showUploadResultDialog(e.toString());
+				executorService.execute(new Runnable() {
+					@Override
+					public void run() {
+						uploadErrorJson();
+					}
+				});
 
+			}
+
+			@Override
+			public void onComplete() {
+				Log.i("rescounter","onComplete()");
+			}
+		});
+	}
+
+
+	private void uploadErrorJson() {
+		NetWorks.uploadErrorJson(stringBuffer.toString(), MyConstant.token, new Observer<ResultBean>() {
+			@Override
+			public void onSubscribe(Disposable d) {
+				Log.i("rescounter","start  uploadErrorJson 订阅.......");
+			}
+
+			@Override
+			public void onNext(final ResultBean resultBean) {
+				MainActivity.this.runOnUiThread(new Runnable() {
+					@Override
+					public void run() {
+//						Toast.makeText(MainActivity.this,resultBean.getStatus() +resultBean.getMessage(),Toast.LENGTH_LONG).show();
+						showUploadResultDialog(resultBean.getStatus()+":"+resultBean.getMessage());
+						Log.i("rescounter","uploadErrorJson  resultBean.getStatus():"+resultBean.getStatus() + resultBean.getMessage());
+
+					}
+				});
+
+			}
+
+			@Override
+			public void onError(final Throwable e) {
 				MainActivity.this.runOnUiThread(new Runnable() {
 					@Override
 					public void run() {
@@ -328,47 +364,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			}
 		});
 	}
-
-
-//	private void uploadErrorJson() {
-//		NetWorks.uploadErrorJson(stringBuffer.toString(), MyConstant.token, new Observer<ResultBean>() {
-//			@Override
-//			public void onSubscribe(Disposable d) {
-//				Log.i("rescounter","start  uploadErrorJson 订阅.......");
-//			}
-//
-//			@Override
-//			public void onNext(final ResultBean resultBean) {
-//				MainActivity.this.runOnUiThread(new Runnable() {
-//					@Override
-//					public void run() {
-////						Toast.makeText(MainActivity.this,resultBean.getStatus() +resultBean.getMessage(),Toast.LENGTH_LONG).show();
-//						showUploadResultDialog(resultBean.getStatus()+":"+resultBean.getMessage());
-//						Log.i("rescounter","uploadErrorJson  resultBean.getStatus():"+resultBean.getStatus() + resultBean.getMessage());
-//
-//					}
-//				});
-//
-//			}
-//
-//			@Override
-//			public void onError(final Throwable e) {
-//				MainActivity.this.runOnUiThread(new Runnable() {
-//					@Override
-//					public void run() {
-//						Log.i("rescounter",e.toString());
-////						Toast.makeText(MainActivity.this,resultBean.getStatus() +resultBean.getMessage(),Toast.LENGTH_LONG).show();
-//						showUploadResultDialog(e.toString());
-//					}
-//				});
-//			}
-//
-//			@Override
-//			public void onComplete() {
-//				Log.i("rescounter","onComplete()");
-//			}
-//		});
-//	}
 
 	private void showUploadResultDialog(final String failMessage) {
 		AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this)
