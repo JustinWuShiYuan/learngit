@@ -67,6 +67,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	private StringBuffer stringBuffer;
 	private String accountNum = "123456";
 	private String payTypeNum = "ZFB";
+	private String uuid = "";
 	private List <Integer> moneyList;
 	private List<AccountBean> accountBeanList ;
 	private String zeroStr = "00";
@@ -217,6 +218,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		stringBuffer.append("{");
 			stringBuffer.append(fuHao+"account"+ fuHao +":"+ fuHao +accountNum+fuHao+",");
 			stringBuffer.append(fuHao+"payType"+ fuHao +":"+ fuHao +payTypeNum+fuHao+",");
+			stringBuffer.append(fuHao+"uuid"+ fuHao +":"+ fuHao +PayHelperUtils.getMacAddress()+fuHao+",");
 			stringBuffer.append(fuHao+"qr"+fuHao+":"+"{");
 			for(int i=0;i<moneyList.size();i++){
 				stringBuffer.append(fuHao+moneyList.get(i)+fuHao +":"+"[");//
