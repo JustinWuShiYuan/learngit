@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Oct 02 17:46:20 CST 2018
+#Sun Oct 07 18:33:58 CST 2018
 4.path=lib/x86/libjcore120.so
 8.set=ASSET
 6.path=lib/mips/libjcore120.so

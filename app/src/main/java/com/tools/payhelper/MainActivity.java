@@ -464,9 +464,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				executorService.execute(new Runnable() {
 					@Override
 					public void run() {
-//						for (int i = 0;i<=listRuleData.size();i++){//测试数据
-//							accountBeanList.add( new AccountBean(listRuleData.get(i).toString(),"htpp://wwwwww"+money));
-//						}
 						isClicked = true;
 						startJointUploadJson();
 					}
