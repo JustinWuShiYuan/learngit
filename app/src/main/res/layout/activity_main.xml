@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_gravity="center"
-            android:text="当前版本3.0" />
+            android:text="当前版本4.0-ip版本" />
 
         <Button
             android:id="@+id/btn_start_upload"
