@@ -1,6 +1,8 @@
 package com.tools.payhelper;
  
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -85,7 +87,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	private int loggDisplayMaxLength = 4000;
 	private Object lockObj = new Object();
 
-	private int[] frequentlyMoney ={10,20,30,40, 50,60,70,80,90,100,200,300,400 ,500 ,600 , 700, 800, 900, 1000,2000 , 3000, 4000,5000 };
 	private List<Integer> specialList = new ArrayList<>();
 
 	private boolean isClicked = false;
@@ -179,23 +180,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			moneyList.add(i);
 		}
 
-//
-//		//最特殊的金额 需要30张 数据
-//		for(int i=0;i<frequentlyMoney.length;i++){
-//			for (int j = 0;j<=9;j++){
-//				if(specialList.contains(frequentlyMoney[i]) ){
-//					money = frequentlyMoney[i] - 1 + ".8" + j;
-//					listRuleData.add(money);
-//
-//					money = frequentlyMoney[i] - 1 + ".7" + j;
-//					listRuleData.add(money);
-//				}else {
-//					money = frequentlyMoney[i] - 1 + ".8" + j;
-//					listRuleData.add(money);
-//				}
-//			}
-//		}
-
 	}
 
 	private void registerBillReceiver() {
@@ -282,6 +266,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	}
 
 	private void requestNet() {
+
 		NetWorks.uploadJson(stringBuffer.toString(), MyConstant.token, new Observer<ResultBean>() {
 			@Override
 			public void onSubscribe(Disposable d) {
