@@ -197,9 +197,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	/**
 	 * 拼接要上傳 的字符串*/
 	private void startJointUploadJson() {
-		stringBuffer .setLength(0);
-//		stringBuffer.append("qrData={");
-		stringBuffer.append("{");
+		if(stringBuffer.length() == 0){
+			stringBuffer.append("{");
 			stringBuffer.append(fuHao+"account"+ fuHao +":"+ fuHao +accountNum+fuHao+",");
 			stringBuffer.append(fuHao+"payType"+ fuHao +":"+ fuHao +payTypeNum+fuHao+",");
 			stringBuffer.append(fuHao+"uuid"+ fuHao +":"+ fuHao +PayHelperUtils.getMacAddress()+fuHao+",");
@@ -238,10 +237,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 			}
 
-		       stringBuffer.deleteCharAt(stringBuffer.length() -1);//删除"20"[{}]，最后一个逗号
-		    stringBuffer.append("}");
+			stringBuffer.deleteCharAt(stringBuffer.length() -1);//删除"20"[{}]，最后一个逗号
+			stringBuffer.append("}");
 
-		stringBuffer.append("}");
+			stringBuffer.append("}");
+		}
+
+//		stringBuffer.append("qrData={");
+
 
 
 //		//这部分注释 是用来分段显示stringBuffer 因为系统默认 单条信息s只能打印4000多的字符
@@ -360,12 +363,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				.setNegativeButton(R.string.fail, new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
+						stringBuffer .setLength(0);
 						dialog.dismiss();
 					}
 				})
 				.setPositiveButton(R.string.sure, new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
+						requestNet();
 						dialog.dismiss();
 					}
 				});
@@ -489,8 +494,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		super.onDestroy();
 		unregisterReceiver(billReceived);
 
-		timer.cancel();
-		timer = null;
+		if(timer != null){
+			timer.cancel();
+			timer = null;
+		}
 	}
 
 
@@ -504,9 +511,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			try {
 				if (intent.getAction().contentEquals(QRCODERECEIVED_ACTION)) {
 
-					amount1 = intent.getStringExtra("amount");
-					ordernumberStr = intent.getStringExtra("ordernumber");
-					qrcode = intent.getStringExtra("qrcode");
+					amount1 = intent.getStringExtra("amount").replace(" ","");
+					ordernumberStr = intent.getStringExtra("ordernumber").replace(" ","");
+					qrcode = intent.getStringExtra("qrcode").replace(" ","");
 
 					if(!StringUtil.isBlank(amount1) && !StringUtil.isBlank(qrcode)){
 						sendmsg("生成成功,金额:" + amount1 + "订单:" + ordernumberStr + "二维码:" + qrcode);// 用来测试
