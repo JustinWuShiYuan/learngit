@@ -13,6 +13,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 
+import com.google.zxing.common.StringUtils;
+import com.lidroid.xutils.util.LogUtils;
 import com.tools.payhelper.bean.AccountBean;
 import com.tools.payhelper.bean.ResultBean;
 import com.tools.payhelper.constants.MyConstant;
@@ -26,6 +28,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -58,7 +61,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	public  String TRADENORECEIVED_ACTION = "com.tools.payhelper.tradenoreceived";
 	public  String ordernumberStr;
 	private Context context;
-    public  List listRuleData ;
+    public  List<String> listRuleData ;
     private  String money;
 	private int ruleIndex = 0;
 	private  Timer timer;
@@ -98,6 +101,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		super.onCreate(savedInstanceState);
 		getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 		setContentView(R.layout.activity_main);
+
+		if (android.os.Build.VERSION.SDK_INT > 9) {
+			StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+			StrictMode.setThreadPolicy(policy);
+		}
 
 		initView();
 		initSpecialListData();
@@ -139,7 +147,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 		timer = new Timer();
 
-		for (int i= 10;i<=100;i++){
+		for (int i= 10;i<= 100;i++){
 			for (int j = 0 ;j<=9;j++){
 				money = i - 1 + ".9" + j;
 				listRuleData.add(money);
@@ -207,6 +215,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				stringBuffer.append(fuHao+moneyList.get(i)+fuHao +":"+"[");//
 				for(int j=0;j<accountBeanList.size();j++){
 					String amount = accountBeanList.get(j).getAmount();
+					String url = accountBeanList.get(j).getUrl().replace(" ","");
+					if(null == url || StringUtil.isBlank(url)){
+						continue;
+					}
 
 					String[] amountArray = amount.split("\\.");
 					if( amountArray[1].equals(zeroStr) ){
@@ -363,7 +375,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				.setNegativeButton(R.string.fail, new DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
-						stringBuffer .setLength(0);
+//						stringBuffer .setLength(0);
 						dialog.dismiss();
 					}
 				})
@@ -426,14 +438,16 @@ public class MainActivity extends Activity implements View.OnClickListener {
 					@Override
 					public void run() {
 						if(ruleIndex < listRuleData.size()){
-							PayHelperUtils.sendAppPay(String.valueOf(listRuleData.get(ruleIndex)),PayHelperUtils.getOrderNumber(),context);
+							Log.d("message","send money:"+listRuleData.get(ruleIndex));
+//							PayHelperUtils.sendAppPay(listRuleData.get(ruleIndex),PayHelperUtils.getOrderNumber(),context);
+							PayHelperUtils.sendAppPay(listRuleData.get(ruleIndex),"orderNum",context);
 							ruleIndex++;
 						}else{
 							timer.cancel();
 							timer = null;
 						}
 					}
-				},35000,700);
+				},30000,1000);
 
 				break;
 
@@ -455,6 +469,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 					@Override
 					public void run() {
 						isClicked = true;
+						ruleIndex = 0;
 						startJointUploadJson();
 					}
 				});
@@ -492,12 +507,23 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
+
+		Log.d("message","onDestroy");
 		unregisterReceiver(billReceived);
 
 		if(timer != null){
 			timer.cancel();
 			timer = null;
 		}
+	}
+
+	@Override
+	public void finish() {
+		/**
+		 * 记住不要执行此句 super.finish(); 因为这是父类已经实现了改方法
+		 * 设置该activity永不过期，即不执行onDestroy()
+		 */
+		moveTaskToBack(true);
 	}
 
 
@@ -515,7 +541,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
 					ordernumberStr = intent.getStringExtra("ordernumber").replace(" ","");
 					qrcode = intent.getStringExtra("qrcode").replace(" ","");
 
-					if(!StringUtil.isBlank(amount1) && !StringUtil.isBlank(qrcode)){
+					if(null == qrcode || null == amount1){
+						return;
+					}
+					if(!StringUtil.isBlank(ordernumberStr) && !StringUtil.isBlank(qrcode) && !StringUtil.isBlank(qrcode)){
+						Log.d("message2","amount1:"+amount1 +" ordernumberStr:"+ordernumberStr +"qrcode:"+qrcode);
 						sendmsg("生成成功,金额:" + amount1 + "订单:" + ordernumberStr + "二维码:" + qrcode);// 用来测试
 						accountBeanList.add( new AccountBean(amount1,qrcode));
 					}
