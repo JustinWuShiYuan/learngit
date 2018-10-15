@@ -163,8 +163,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="583">
-              <caret line="551" column="17" lean-forward="true" selection-start-line="551" selection-start-column="17" selection-end-line="551" selection-end-column="17" />
+            <state relative-caret-position="675">
+              <caret line="555" column="13" lean-forward="true" selection-start-line="555" selection-start-column="13" selection-end-line="555" selection-end-column="13" />
               <folding>
                 <element signature="e#8738#9114#0" expanded="true" />
                 <element signature="e#9113#9114#0" expanded="true" />
@@ -3127,8 +3127,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="551" column="17" lean-forward="true" selection-start-line="551" selection-start-column="17" selection-end-line="551" selection-end-column="17" />
+        <state relative-caret-position="675">
+          <caret line="555" column="13" lean-forward="true" selection-start-line="555" selection-start-column="13" selection-end-line="555" selection-end-column="13" />
           <folding>
             <element signature="e#8738#9114#0" expanded="true" />
             <element signature="e#9113#9114#0" expanded="true" />
