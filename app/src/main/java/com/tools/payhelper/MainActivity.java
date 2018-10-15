@@ -541,7 +541,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 					ordernumberStr = intent.getStringExtra("ordernumber").replace(" ","");
 					qrcode = intent.getStringExtra("qrcode").replace(" ","");
 
-					if(null == qrcode || null == amount1){
+					if(null == qrcode || null == amount1 || amount1.equals("orderNum")){
 						return;
 					}
 					if(!StringUtil.isBlank(ordernumberStr) && !StringUtil.isBlank(qrcode) && !StringUtil.isBlank(qrcode)){
