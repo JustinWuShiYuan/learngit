@@ -216,7 +216,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				for(int j=0;j<accountBeanList.size();j++){
 					String amount = accountBeanList.get(j).getAmount();
 					String url = accountBeanList.get(j).getUrl().replace(" ","");
-					if(null == url || StringUtil.isBlank(url)){
+					if(null == url || StringUtil.isBlank(url) || url.length() == 0
+							|| null == amount	|| amount.equals("orderNum")){
 						continue;
 					}
 
@@ -227,7 +228,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 //							Log.d("uploadJson","amount:"+amount);
 							stringBuffer.append("{");
 							stringBuffer.append(amount_ +":"+ fuHao+amount+fuHao +",");
-							stringBuffer.append(url_ +":"+ fuHao +accountBeanList.get(j).getUrl()+fuHao);
+							stringBuffer.append(url_ +":"+ fuHao +url+fuHao);
 							stringBuffer.append("},");
 						}
 //						Log.d("uploadJson",stringBuffer.toString());
@@ -237,7 +238,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 						if(money == moneyList.get(i)){
 							stringBuffer.append("{");
 							stringBuffer.append(amount_ +":"+ fuHao+amount+fuHao +",");
-							stringBuffer.append(url_ +":"+ fuHao+accountBeanList.get(j).getUrl()+fuHao);
+							stringBuffer.append(url_ +":"+ fuHao+url+fuHao);
 							stringBuffer.append("},");
 						}
 //						Log.d("uploadJson",stringBuffer.toString());
@@ -291,31 +292,41 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			@Override
 			public void onNext(final ResultBean resultBean) {
 
-				if(resultBean.getStatus() != 200){
-					uploadErrorJson();
-				}else if(resultBean.getStatus() == 200){
-					MainActivity.this.runOnUiThread(new Runnable() {
-						@Override
-						public void run() {
-//						Toast.makeText(MainActivity.this,resultBean.getStatus() +resultBean.getMessage(),Toast.LENGTH_LONG).show();
-							showUploadResultDialog(resultBean.getStatus()+":"+resultBean.getMessage());
-							Log.i("rescounter","resultBean.getStatus():"+resultBean.getStatus() + resultBean.getMessage());
+//				if(resultBean.getStatus() != 200){
+//					uploadErrorJson();
+//				}else if(resultBean.getStatus() == 200){
+//					MainActivity.this.runOnUiThread(new Runnable() {
+//						@Override
+//						public void run() {
+////						Toast.makeText(MainActivity.this,resultBean.getStatus() +resultBean.getMessage(),Toast.LENGTH_LONG).show();
+//							showUploadResultDialog(resultBean.getStatus()+":"+resultBean.getMessage());
+//							Log.i("rescounter","resultBean.getStatus():"+resultBean.getStatus() + resultBean.getMessage());
+//
+//						}
+//					});
+//				}
 
-						}
-					});
-				}
+				MainActivity.this.runOnUiThread(new Runnable() {
+					@Override
+					public void run() {
+//						Toast.makeText(MainActivity.this,resultBean.getStatus() +resultBean.getMessage(),Toast.LENGTH_LONG).show();
+						showUploadResultDialog(resultBean.getStatus()+":"+resultBean.getMessage());
+						Log.i("rescounter","resultBean.getStatus():"+resultBean.getStatus() + resultBean.getMessage());
+
+					}
+				});
 
 			}
 
 			@Override
 			public void onError(final Throwable e) {
 				showUploadResultDialog(e.toString());
-				executorService.execute(new Runnable() {
-					@Override
-					public void run() {
-						uploadErrorJson();
-					}
-				});
+//				executorService.execute(new Runnable() {
+//					@Override
+//					public void run() {
+//						uploadErrorJson();
+//					}
+//				});
 
 			}
 
@@ -434,20 +445,27 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				}
 
 
-				timer.schedule(new TimerTask() {
+				executorService.execute(new Runnable() {
 					@Override
 					public void run() {
-						if(ruleIndex < listRuleData.size()){
-							Log.d("message","send money:"+listRuleData.get(ruleIndex));
+						timer.schedule(new TimerTask() {
+							@Override
+							public void run() {
+								if(ruleIndex < listRuleData.size()){
+									Log.d("message","send money:"+listRuleData.get(ruleIndex));
 //							PayHelperUtils.sendAppPay(listRuleData.get(ruleIndex),PayHelperUtils.getOrderNumber(),context);
-							PayHelperUtils.sendAppPay(listRuleData.get(ruleIndex),"orderNum",context);
-							ruleIndex++;
-						}else{
-							timer.cancel();
-							timer = null;
-						}
+									PayHelperUtils.sendAppPay(listRuleData.get(ruleIndex),"orderNum",context);
+									ruleIndex++;
+								}else{
+									timer.cancel();
+									timer = null;
+								}
+							}
+						},30000,700);
 					}
-				},30000,1000);
+				});
+
+
 
 				break;
 
@@ -507,7 +525,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-
 		Log.d("message","onDestroy");
 		unregisterReceiver(billReceived);
 
@@ -515,16 +532,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			timer.cancel();
 			timer = null;
 		}
+
+		if(timer2 != null){
+			timer2.cancel();
+			timer2 = null;
+		}
+
 	}
 
-	@Override
-	public void finish() {
-		/**
-		 * 记住不要执行此句 super.finish(); 因为这是父类已经实现了改方法
-		 * 设置该activity永不过期，即不执行onDestroy()
-		 */
-		moveTaskToBack(true);
-	}
 
 
 
@@ -535,19 +550,22 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		@Override
 		public void onReceive(final Context context, Intent intent) {
 			try {
-				if (intent.getAction().contentEquals(QRCODERECEIVED_ACTION)) {
 
-					amount1 = intent.getStringExtra("amount").replace(" ","");
-					ordernumberStr = intent.getStringExtra("ordernumber").replace(" ","");
-					qrcode = intent.getStringExtra("qrcode").replace(" ","");
+				synchronized (lockObj){
+					if (intent.getAction().contentEquals(QRCODERECEIVED_ACTION)) {
 
-					if(null == qrcode || null == amount1 || amount1.equals("orderNum")){
-						return;
-					}
-					if(!StringUtil.isBlank(ordernumberStr) && !StringUtil.isBlank(qrcode) && !StringUtil.isBlank(qrcode)){
-						Log.d("message2","amount1:"+amount1 +" ordernumberStr:"+ordernumberStr +"qrcode:"+qrcode);
-						sendmsg("生成成功,金额:" + amount1 + "订单:" + ordernumberStr + "二维码:" + qrcode);// 用来测试
-						accountBeanList.add( new AccountBean(amount1,qrcode));
+						amount1 = intent.getStringExtra("amount").replace(" ","");
+						ordernumberStr = intent.getStringExtra("ordernumber").replace(" ","");
+						qrcode = intent.getStringExtra("qrcode").replace(" ","");
+
+						if(null == qrcode || null == amount1 || amount1.equals("orderNum")){
+							return;
+						}
+						if(!StringUtil.isBlank(ordernumberStr) && !StringUtil.isBlank(qrcode) && !StringUtil.isBlank(qrcode)){
+							Log.d("message2","amount1:"+amount1 +" ordernumberStr:"+ordernumberStr +"qrcode:"+qrcode);
+							sendmsg("生成成功,金额:" + amount1 + "订单:" + ordernumberStr + "二维码:" + qrcode);// 用来测试
+							accountBeanList.add( new AccountBean(amount1,qrcode));
+						}
 					}
 				}
 
