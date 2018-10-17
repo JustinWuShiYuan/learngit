@@ -96,11 +96,12 @@ public class PayHelperUtils {
 	}
 
 
-	static Intent broadCastIntentPay = new Intent();
+//	static Intent broadCastIntentPay = new Intent();
 	public synchronized static void sendAppPay(String amount, String ordernumber, Context context) {
+		Intent broadCastIntentPay = new Intent();
 		broadCastIntentPay.setAction(ALIPAYSTART_ACTION);
-		broadCastIntentPay.putExtra("ordernumber", ordernumber);
 		broadCastIntentPay.putExtra("amount", amount);
+		broadCastIntentPay.putExtra("ordernumber", ordernumber);
 		context.sendBroadcast(broadCastIntentPay);
 	}
 

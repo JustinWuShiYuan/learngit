@@ -453,6 +453,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
 							public void run() {
 								if(ruleIndex < listRuleData.size()){
 									Log.d("message","send money:"+listRuleData.get(ruleIndex));
+									try {
+										Float.parseFloat(listRuleData.get(ruleIndex));
+									}catch (Exception e){
+										return;
+									}
 //							PayHelperUtils.sendAppPay(listRuleData.get(ruleIndex),PayHelperUtils.getOrderNumber(),context);
 									PayHelperUtils.sendAppPay(listRuleData.get(ruleIndex),"orderNum",context);
 									ruleIndex++;
