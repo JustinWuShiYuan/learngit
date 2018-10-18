@@ -10,7 +10,9 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="54a7cffb-a383-4b37-a947-bc2b207d3404" name="Default" comment="" />
+    <list default="true" id="54a7cffb-a383-4b37-a947-bc2b207d3404" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +37,8 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="555" column="8" lean-forward="false" selection-start-line="555" selection-start-column="8" selection-end-line="579" selection-end-column="9" />
+            <state relative-caret-position="613">
+              <caret line="574" column="17" lean-forward="true" selection-start-line="574" selection-start-column="17" selection-end-line="574" selection-end-column="17" />
               <folding>
                 <element signature="method#initSpecialListData#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#initView#0;class#MainActivity#0" expanded="false" />
@@ -2960,8 +2962,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/tools/payhelper/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="555" column="8" lean-forward="false" selection-start-line="555" selection-start-column="8" selection-end-line="579" selection-end-column="9" />
+        <state relative-caret-position="613">
+          <caret line="574" column="17" lean-forward="true" selection-start-line="574" selection-start-column="17" selection-end-line="574" selection-end-column="17" />
           <folding>
             <element signature="method#initSpecialListData#0;class#MainActivity#0" expanded="false" />
             <element signature="method#initView#0;class#MainActivity#0" expanded="false" />
